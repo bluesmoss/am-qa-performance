@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "artillery run --output results/report.json performance.yml && artillery report --output results/report.html results/report.json"
   },
   "repository": {
     "type": "git",
