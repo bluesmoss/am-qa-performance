@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/bluesmoss/am-qa-performance#readme",
   "dependencies": {
-    "artillery": "^1.6.2"
+    "artillery": "^1.6.2",
+    "dotenv": "^8.2.0"
   }
 }
