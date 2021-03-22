@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/bluesmoss/am-qa-performance/issues"
   },
-  "homepage": "https://github.com/bluesmoss/am-qa-performance#readme"
+  "homepage": "https://github.com/bluesmoss/am-qa-performance#readme",
+  "dependencies": {
+    "artillery": "^1.6.2"
+  }
 }
