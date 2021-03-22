@@ -1,0 +1,25 @@
+{
+  "name": "am-qa-performance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluesmoss/am-qa-performance.git"
+  },
+  "keywords": [
+    "artillery",
+    "automation",
+    "performance",
+    "testing"
+  ],
+  "author": "@bluesmoss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bluesmoss/am-qa-performance/issues"
+  },
+  "homepage": "https://github.com/bluesmoss/am-qa-performance#readme"
+}
