@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "init": "export TOKEN=\"PUT_YOUR_API_TOKEN_HERE\" && mkdir results && mkdir results/staging && mkdir results/production",
+    "init": "mkdir results && mkdir results/staging && mkdir results/production",
     "test": "artillery run --output results/report.json performance.yml && artillery report --output results/report.html results/report.json",
     "test-staging": "artillery run -e staging --output results/staging/report.json performance.yml && artillery report --output results/staging/report.html results/staging/report.json",
     "test-production": "artillery run -e production --output results/production/report.json performance.yml && artillery report --output results/production/report.html results/production/report.json"
