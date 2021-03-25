@@ -7,6 +7,11 @@ config:
     - duration: 10
       arrivalRate: 3
       name: "Phase 2"
+  plugins:
+    faker:
+      locale: en
+  variables:
+    firstName: "$faker.name.firstName"
   environments:
     production:
       target: "https://api.todoist.com"
@@ -34,13 +39,13 @@ scenarios:
           capture:
             json: "$.id"
             as: "id"
-      - log: "Current id is {{ id }}"
+      - log: "Current id is {{ id }} created by {{ firstName }}"
       - get:
           url: '/rest/v1/tasks/{{ id }}'
       - post:
           url: '/rest/v1/tasks/{{ id }}'
           json:
-            content: "Task with artillery updated"
+            content: "Task with artillery updated by {{ firstName }}"
       - post:
           url: '/rest/v1/tasks/{{ id }}/close'
       - post:
