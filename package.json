@@ -27,6 +27,7 @@
   "homepage": "https://github.com/bluesmoss/am-qa-performance#readme",
   "dependencies": {
     "artillery": "^1.6.2",
+    "artillery-plugin-faker": "^3.0.0",
     "dotenv": "^8.2.0"
   }
 }
