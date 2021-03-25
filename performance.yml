@@ -6,7 +6,18 @@ config:
       name: "Phase 1"
     - duration: 10
       arrivalRate: 3
-      name: "Phase 2"      
+      name: "Phase 2"
+  environments:
+    production:
+      target: "https://api.todoist.com"
+      phases:
+        - duration: 5
+          arrivalRate: 1
+    staging:
+      target: "https://api.todoist.com"
+      phases:
+        - duration: 1
+          arrivalRate: 1
   defaults:
     headers:
       Authorization: Bearer {{$processEnvironment.TOKEN}}
