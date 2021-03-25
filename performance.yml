@@ -4,6 +4,9 @@ config:
     - duration: 1
       arrivalRate: 1
       name: "Phase 1"
+    - duration: 10
+      arrivalRate: 3
+      name: "Phase 2"      
   defaults:
     headers:
       Authorization: Bearer {{$processEnvironment.TOKEN}}
