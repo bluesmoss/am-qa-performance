@@ -1,4 +1,4 @@
-# QA Backend Automation
+# QA Performance Automation
 
 This project belongs to the 3rd assessment of the QA automation certification of Wizeline Academy
 
