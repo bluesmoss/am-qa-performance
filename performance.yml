@@ -4,13 +4,14 @@ config:
     - duration: 1
       arrivalRate: 1
       name: "Phase 1"
-    - duration: 10
-      arrivalRate: 3
+    - duration: 1
+      arrivalRate: 1
       name: "Phase 2"
   plugins:
     faker:
       locale: en
   variables:
+    baseTasksURL: "/rest/v1/tasks"
     firstName: "$faker.name.firstName"
   environments:
     production:
@@ -31,9 +32,9 @@ config:
 scenarios:
   - flow:
       - get:
-          url: "/rest/v1/tasks"
+          url: "{{ baseTasksURL }}"
       - post:
-          url: '/rest/v1/tasks'
+          url: "{{ baseTasksURL }}"
           json:
             content: "Task with artillery"
           capture:
@@ -41,14 +42,14 @@ scenarios:
             as: "id"
       - log: "Current id is {{ id }} created by {{ firstName }}"
       - get:
-          url: '/rest/v1/tasks/{{ id }}'
+          url: '{{ baseTasksURL }}/{{ id }}'
       - post:
-          url: '/rest/v1/tasks/{{ id }}'
+          url: '{{ baseTasksURL }}/{{ id }}'
           json:
             content: "Task with artillery updated by {{ firstName }}"
       - post:
-          url: '/rest/v1/tasks/{{ id }}/close'
+          url: '{{ baseTasksURL }}/{{ id }}/close'
       - post:
-          url: '/rest/v1/tasks/{{ id }}/reopen'
+          url: '{{ baseTasksURL }}/{{ id }}/reopen'
       - delete:
-          url: '/rest/v1/tasks/{{ id }}'
+          url: '{{ baseTasksURL }}/{{ id }}'
