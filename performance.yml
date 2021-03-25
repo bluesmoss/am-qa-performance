@@ -28,8 +28,8 @@ scenarios:
           json:
             content: "Task with artillery updated"
       - post:
-          url: '/rest/v1/tasks/{{ id }}/close'    
+          url: '/rest/v1/tasks/{{ id }}/close'
       - post:
-          url: '/rest/v1/tasks/{{ id }}/reopen'                 
+          url: '/rest/v1/tasks/{{ id }}/reopen'
       - delete:
-          url: '/rest/v1/tasks/{{ id }}'              
+          url: '/rest/v1/tasks/{{ id }}'
