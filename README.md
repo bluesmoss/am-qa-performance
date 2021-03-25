@@ -32,16 +32,16 @@ cd am-qa-performance
 npm install
 ```
 
-- Open the package.json file and replace the value of the token for your own API key.
+- Run the command to create the folder reports
 
 ```
-"init": "export TOKEN=\"PUT_YOUR_API_TOKEN_HERE\" && mkdir results && mkdir results/staging && mkdir results/production",
+npm run init
 ```
 
-It should be something like this:
+-  Run the command to define the token API
 
 ```
-"init": "export TOKEN=\"fbr56c199e3a2141713eef03ac736cc24613fg56\" && mkdir results && mkdir results/staging && mkdir results/production",
+export TOKEN="YOUR_TOKEN_HERE"
 ```
 
 ## Running the tests
