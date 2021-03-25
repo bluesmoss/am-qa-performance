@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "artillery run --output results/report.json performance.yml && artillery report --output results/report.html results/report.json"
+    "init": "export TOKEN=\"fb4ac199e3a2141713eef03ac736cc2461368c69\" && mkdir results && mkdir results/staging && mkdir results/production",
+    "test": "artillery run --output results/report.json performance.yml && artillery report --output results/report.html results/report.json",
+    "test-staging": "artillery run -e staging --output results/staging/report.json performance.yml && artillery report --output results/staging/report.html results/staging/report.json",
+    "test-production": "artillery run -e production --output results/production/report.json performance.yml && artillery report --output results/production/report.html results/production/report.json"
   },
   "repository": {
     "type": "git",
